@@ -52,6 +52,15 @@
 3. In the address bar, click the Install icon
 4. Confirm by clicking Install
 
+## Install PWA on iPhone or iPad
+1. Open Safari
+2. Go to the [website](https://sawyerf.github.io/Castafiore/)
+3. Tap the Share button
+4. Tap `Add to Home Screen`
+5. Launch Castafiore from the new home screen icon
+
+On iOS, the app opens as a standalone web app from its own icon instead of inside a normal Safari tab.
+
 ## Build locally
 ### Web
 If you want to build the web version, run the following command:
@@ -59,7 +68,7 @@ If you want to build the web version, run the following command:
 npm i
 npm run export:web
 ```
-It will generate a folder `web-build` that you can deploy to your server.
+It will generate a folder `dist` that you can deploy to your server.
 
 ### Android
 If you want to build the .apk, you need to install Android Studio and you run the following command

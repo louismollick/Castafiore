@@ -105,6 +105,7 @@ export const defaultSettings = {
 	maxBitRate: 0,
 	playSeedFirst: false,
 	repeatQueue: true,
+	yomitanDictionaryPreferences: [],
 	// Playlist settings
 	reversePlaylist: false,
 	orderPlaylist: 'title',

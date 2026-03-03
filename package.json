@@ -11,6 +11,7 @@
     "web": "cross-env PLATFORM=web IS_DEV=true expo start --web",
     "export:web": "cross-env PLATFORM=web expo export -p web && workbox generateSW workbox-config.js",
     "eslint": "eslint app index.js App.js -c eslint.config.mjs",
+    "typecheck": "tsc --noEmit",
     "postinstall": "patch-package"
   },
   "dependencies": {
@@ -37,18 +38,22 @@
     "react-native-track-player": "4.1.1-nightly-c46c8fb107e0de61d9b33c28e7228002077b4f20",
     "react-native-udp": "^4.1.7",
     "react-native-vector-icons": "^10.2.0",
-    "react-native-web": "^0.20.0"
+    "react-native-web": "^0.20.0",
+    "yomitan-core": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@eslint/js": "^9.17.0",
     "@expo/metro-runtime": "~5.0.5",
+    "@types/react": "^19.2.14",
+    "@typescript-eslint/parser": "^8.56.1",
     "babel-plugin-root-import": "^6.6.0",
     "cross-env": "^7.0.3",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.3",
     "globals": "^15.14.0",
     "patch-package": "^8.0.0",
+    "typescript": "^5.9.3",
     "workbox-cli": "^7.3.0"
   },
   "private": true

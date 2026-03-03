@@ -1,6 +1,6 @@
 import React from 'react'
 import pkg from '~/../package.json'
-import { Text, View, Image, ScrollView, Pressable, Linking } from 'react-native'
+import { Text, View, Image, ScrollView, Pressable, Linking, Platform } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useTranslation } from 'react-i18next'
 
@@ -91,15 +91,22 @@ const Settings = ({ navigation }) => {
 					title={t("Cache")}
 					icon="database"
 					onPress={() => navigation.navigate('Settings/Cache')}
-					isLast
 				/>
-			</View>
-			<View style={settingStyles.optionsContainer(theme)}>
+				{Platform.OS === 'web' && (
+					<ButtonMenu
+						title={"Dictionaries"}
+						icon="book"
+						onPress={() => navigation.navigate('Settings/Dictionaries')}
+					/>
+				)}
 				<ButtonMenu
 					title={t("Theme")}
 					icon="tint"
 					onPress={() => navigation.navigate('Settings/Theme')}
+					isLast
 				/>
+			</View>
+			<View style={settingStyles.optionsContainer(theme)}>
 				<ButtonMenu
 					title={t("Language")}
 					icon="language"
